@@ -1,0 +1,91 @@
+/* Even though we don't define the body element in our HTML
+ * the browser still creates it and puts all content into it.
+ * THis means we can still select it and style it, so here
+ * we say that it can only go to a maximum width of 50* the
+ * height of a capital M, so, a bit over 50 characters wide,
+ * which makes for comfy reading.
+ * setting the margins to auto on all sides makes the document
+ * centre aligned.
+ */
+body {
+  max-width: 50em;
+  margin: auto;
+  padding: 1em;
+}
+
+/* There are two selectors here, separated by a comma,
+ * so this rule applies to all h1 elements AND all h2
+ * elements
+ */
+h1, h2 {
+  color: darkorange;
+  margin: 0.5em;
+}
+
+/* Sets the background of all paragraohs to be 
+ * a semi-transparent yellow, with a 1em pad
+ * around the text.
+ */
+p {
+  background: rgb(255,255,0,0.5);
+  padding: 1em;
+}
+
+/* Gives the header a curved orange border with a
+ * light green background.
+ * Note that the text colour is affected elsewhere
+ * by the h1, h2 selector.
+ */
+header {
+  background: rgb(0,255,127,0.5);
+  border: 0.25em solid darkorange;
+  border-radius: 1em
+}
+
+/* Style one particular element a a mid-blue.  It can only be one
+ * element because hash is a selector for an element's ID and all
+ * IDs must be unique in a document.
+#mum {
+  color: #3399FF; 
+}
+
+/* This is a class selector (the dot is the thing that defines this)
+ * and it says that any element with a class attribute that includes
+ * the word "important" should be rendered as white text on a red
+ * backdrop.
+ */
+.important {
+  background: red;
+  color: white;
+}
+
+/* This is also a class selector it says that any element with a class
+ * attribute that includes the word "cool" should be rendered in a bold
+ * sans-serif font.
+ */
+ .cool {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* This selects any code elements and gibs them an old-skool
+ * green-on-black vibe.  A little padding is added to the left and right
+ * of the text for aesthetic purposes. 
+ */
+code {
+  background: black;
+  color: rgb(127,255,127);
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* Each section is indented a little and shown 
+*/
+section {
+  margin: 0 5em 0 5em;
+  padding: 0.5em 1em 0.5em 1em;
+  border: solid 0.1em darkorange;
+  border-left: solid 1em darkorange;
+  border-radius: 2em 1em 1em 2em;
+}
